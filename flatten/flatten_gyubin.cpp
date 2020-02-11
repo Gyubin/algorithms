@@ -8,53 +8,53 @@ https://swexpertacademy.com
 1208. [S/W 문제해결 기본] 1일차 - Flatten
 */
 
-void find_indices(int *arr, int *ptr_max, int *ptr_min)
+void findIndices(int *arr, int *ptrMax, int *ptrMin)
 {
-	int temp_max = -1, temp_min = 999;
-	int idx_max, idx_min;
+	int tempMax = -1, tempMin = 999;
+	int idxMax, idxMin;
 
 	for (int i = 0; i < SIZE; i++)
 	{
-		if (arr[i] > temp_max)
+		if (arr[i] > tempMax)
 		{
-			temp_max = arr[i];
-			idx_max = i;
+			tempMax = arr[i];
+			idxMax = i;
 		}
-		if (arr[i] < temp_min)
+		if (arr[i] < tempMin)
 		{
-			temp_min = arr[i];
-			idx_min = i;
+			tempMin = arr[i];
+			idxMin = i;
 		}
 	}
-	*ptr_max = idx_max;
-	*ptr_min = idx_min;
+	*ptrMax = idxMax;
+	*ptrMin = idxMin;
 }
 
 void dump(int *arr)
 {
-	int idx_max, idx_min;
+	int idxMax, idxMin;
 
-	find_indices(arr, &idx_max, &idx_min);
-	arr[idx_max]--;
-	arr[idx_min]++;
+	findIndices(arr, &idxMax, &idxMin);
+	arr[idxMax]--;
+	arr[idxMin]++;
 }
 
 int main(int argc, char** argv)
 {
-	int test_case;
-	for (test_case = 1; test_case <= 10; ++test_case)
+	int testCase;
+	for (testCase = 1; testCase <= 10; ++testCase)
 	{
 		int arr[SIZE] = { 0 };
-		int dump_num, idx_max, idx_min;
+		int dumpNum, idxMax, idxMin;
 
-		cin >> dump_num;
+		cin >> dumpNum;
 		for (int i = 0; i < SIZE; i++)
 			cin >> arr[i];
-		for (int i = 0; i < dump_num; i++)
+		for (int i = 0; i < dumpNum; i++)
 			dump(arr);
 
-		find_indices(arr, &idx_max, &idx_min);
-		cout << "#" << test_case << " " << arr[idx_max] - arr[idx_min] << endl;
+		findIndices(arr, &idxMax, &idxMin);
+		cout << "#" << testCase << " " << arr[idxMax] - arr[idxMin] << endl;
 	}
 	return 0;
 }
