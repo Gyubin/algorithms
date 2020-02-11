@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+#define SIZE 10
+
 /*
 10개의 수를 입력받아서 집합을 만든다.
 공집합을 제외하고 부분집합 중에서 원소의 합이 0인 것이 있는지 확인.
@@ -9,8 +11,8 @@ using namespace std;
 
 void main(void)
 {
-	int n = 10, flag = 0, sub_sum;
-	int arr[10] = { 0 };
+	int n = SIZE, flag = 0, sub_sum;
+	int arr[SIZE] = { 0 };
 	for (int i = 0; i < n; i++)
 	{
 		cin >> arr[i];
