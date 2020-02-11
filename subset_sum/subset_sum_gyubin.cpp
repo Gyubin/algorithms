@@ -11,7 +11,7 @@ using namespace std;
 
 void main(void)
 {
-	int n = SIZE, flag = 0, sub_sum;
+	int n = SIZE, flag = 0, subSum;
 	int arr[SIZE] = { 0 };
 	for (int i = 0; i < n; i++)
 	{
@@ -20,7 +20,7 @@ void main(void)
 
 	for (int i = 1; i < (1 << (n)); i++)  // 부분집합 개수: n개의 서로 다른 원소를 가지는 집합의 부분집합 개수는 2의 n승
 	{
-		sub_sum = 0;
+		subSum = 0;
 		for (int j = 0; j < n; j++)  // 각 부분집합마다 가능한 원소의 개수만큼 반복
 		{
 			/*
@@ -29,10 +29,10 @@ void main(void)
 			*/
 			if (i & (1 << j))
 			{
-				sub_sum += arr[j];
+				subSum += arr[j];
 			}
 		}
-		if (sub_sum == 0)
+		if (subSum == 0)
 		{
 			flag = 1;
 			break;
