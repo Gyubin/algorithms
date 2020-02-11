@@ -10,12 +10,12 @@ using namespace std;
 
 int main()
 {
-	int num_test, row, col;  // 테스트 개수, 행, 열 변수 선언
+	int numTest, row, col;  // 테스트 개수, 행, 열 변수 선언
 	int height, count, answer;  // 높이, 개수, 정답 변수
 	int dp[100][100] = { 0 };  // 블록이 있는 위치를 기록할 매트릭스
 
-	cin >> num_test;  // test case 개수
-	for (int t = 0; t < num_test; t++)  // test case 반복	
+	cin >> numTest;  // test case 개수
+	for (int t = 0; t < numTest; t++)  // test case 반복	
 	{
 		cin >> col >> row; // 가로 길이 col(9), 세로 길이 row(8) 입력 받기
 
