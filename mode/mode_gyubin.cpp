@@ -1,11 +1,9 @@
-#define _CRT_SECURE_NO_WARNINGS
-
-#include <stdio.h>
-
 /*
 https://swexpertacademy.com/
 최빈수 구하기
 */
+
+#include <stdio.h>
 
 int main(void)
 {
@@ -13,7 +11,6 @@ int main(void)
 	int T;
 	int score, mode_score, mode_count;
 
-	setbuf(stdout, NULL);
 	scanf("%d", &T);
 
 	for (test_case = 1; test_case <= T; ++test_case)
